@@ -1,0 +1,119 @@
+{% extends 'layout.html' %}
+{% block title %}{% endblock %}
+
+{% block css %}
+
+{% endblock %}
+
+{% block js %}
+<script>
+$(document).ready(function (){
+    $(".main-menu li").removeClass("active")
+    $("li#op-home").addClass("active")
+    $('.carousel').carousel({
+      interval: 6000
+    })
+
+});
+</script>
+{% endblock  %}
+
+{% block content %}
+<div class="container-fluid">
+  <div id="myCarousel" class="carousel slide hidden-phone">
+        <div class="carousel-inner">
+          <div class="item active">
+            <img src="{{STATIC_URL}}/img/slide5.jpg" alt="">
+            <div class="container">
+              <div class="carousel-caption">
+                <h2>Nuestros Servicios</h2>
+                <p class="lead">
+                  Dentro del mercado asegurador, nuestra diferencia es la atención personalizada, la asesoría y el apoyo profesional en seguros</p>
+                <a class="btn btn-large btn-primary" href="{% url 'servicios' %}">Ver más &raquo;</a>            </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="{{STATIC_URL}}/img/slide1.jpg" alt="">
+            <div class="container">
+              <div class="carousel-caption">
+                <h2>Seguros de Vida</h2>
+                <p class="lead">
+                  Contamos con todos los planes de Seguros de Vida.</p>
+                <a class="btn btn-large btn-primary" href="{% url 'vida' %}">Ver más &raquo;</a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="{{STATIC_URL}}/img/slide4.jpg" alt="">
+            <div class="container">
+              <div class="carousel-caption">
+               <h2>Seguros de Gastos Médicos Mayores</h2>
+                <p class="lead">
+                  Contamos con los seguros de GMM más económicos del mercado asegurador.</p>
+                <a class="btn btn-large btn-primary" href="{% url 'gmm' %}">Ver más &raquo;</a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="{{STATIC_URL}}/img/slide6.jpg" alt="">
+            <div class="container">
+              <div class="carousel-caption">
+                <h2>Seguros de Daños</h2>
+                <p class="lead">
+                  Además de los seguros tradicionales (Autos y Hogar) contamos con seguros para las pequeñas, medianas, y grandes empresas.</p>
+                <a class="btn btn-large btn-primary" href="{% url 'danios' %}">Ver más &raquo;</a></div>
+            </div>
+          </div>
+
+        </div>
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+  </div><!-- /.carousel -->
+</div>
+
+
+
+
+
+
+<div class="container text-center">
+
+    <div class="row">
+      <div class="span2 offset1 text-center"><img src="{{STATIC_URL}}img/logo.png" alt="Previnteg.logo"></div>
+      <div class="span8 text-left">
+        <h1>Previnteg <br> <span class="px23">Asesoria Profesional en seguros de Vida , Gastos Medicos y Daños.</span></h1>
+        
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="span4">
+          <img class="img-circle" src="{{STATIC_URL}}/img/nuestros_servicios.jpg">
+          <h2>¿Estas interesado en contratar un seguro?</h2>
+          <p>Conoce nuestros servicios ¿Cuál es nuestra diferencia?</p>
+          <p><a class="btn btn-primary" href="{% url 'servicios' %}">Lo que tenemos para ti &raquo;</a></p>
+        </div>
+        <div class="span4">
+          <img class="img-circle" src="{{STATIC_URL}}/img/seguro_vida.jpg">
+          <h2>Seguros de Vida</h2>
+          <p>Contamos con todos los planes de Seguros de Vida.</p>
+          <p><a class="btn btn-primary" href="{% url 'vida' %}">Lo que tenemos para ti  &raquo;</a></p>
+       	</div>
+        <div class="span4">
+          <img class="img-circle" src="{{STATIC_URL}}/img/seguro_GM.jpg">
+          <h2>Seguros de Gastos Médicos Mayores</h2>
+          <p>Contamos con los seguros de GMM más económicos del mercado asegurador.</p>
+          <p><a class="btn btn-primary" href="{% url 'gmm' %}">Lo que tenemos para ti &raquo;</a></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span4 offset4">
+          <img class="img-circle" src="{{STATIC_URL}}/img/contrata_un_seguro.jpg">
+          <h2>Seguros de Daños</h2>
+          <p>Además de los seguros tradicionales (Autos y Hogar) contamos con seguros para las pequeñas, medianas, y grandes empresas.</p>
+          <p><a class="btn btn-primary" href="{% url 'danios' %}">Lo que tenemos para ti &raquo;</a></p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

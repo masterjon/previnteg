@@ -1,0 +1,48 @@
+{% extends 'layout.html' %}  
+
+{% block js %}
+<script>
+$(document).ready(function (){
+    $(".main-menu li").removeClass("active")
+    $("li#op-vida").addClass("active")
+
+});
+</script>
+{% endblock  %}
+  
+{% block content %}
+
+<div class="jumbotron subhead"><img src="{{STATIC_URL}}/img/slide1.jpg"></div>
+    <div class="hero-unit">
+    <h1>SEGUROS DE VIDA </h1>
+    <h2>LO QUE TENEMOS PARA TI</h2>
+    <div class="row-fluid">
+        <div class="span6 border">
+            <p>En  términos generales, el objetivo de un  <b>SEGURO DE VIDA</b>, es mantener el patrimonio familiar  y conservar  el estilo de vida de <b>nuestros seres más queridos.</b></p>
+
+            <p>El <b>SEGURO DE VIDA</b>  además de indemnizar  por  <b>fallecimiento o incapacidad</b>, también nos ofrece la <b>oportunidad  de ahorrar</b>, para   cumplir con metas personales,  o formar   un capital  para el <b>retiro o jubilación.</b></p>
+
+            <p>También el <b>SEGURO DE VIDA</b>  nos brinda la maravillosa oportunidad de <b>garantizar la educación</b> de nuestros hijos,  para que en el  futuro, ellos  reciban  una cantidad importante, que les permita   continuar  con sus estudios o emprender algún negocio. </p>
+        </div>
+        <div class="span6">
+              <p> <b>PREVINTEG</b> se encargara de  diseñar  el  <b>mejor  traje a la medida</b>, que se ajuste a sus necesidades de  protección y presupuesto familiar.</p>
+
+            <p>Acércate a <b>PREVINTEG</b>, para <b>analizar</b> y  <b>detectar</b>  tus necesidades de <b>protección familiar</b> y sin ningún compromiso, <b>permítenos hacer una cita y proponerte el mejor plan de seguros de vida.</b></p>
+
+            <p> Contáctanos estamos preparados  para asesorarte  <b>EN LA ADQUISICION DE UN SEGURO DE VIDA.</b> </p>
+        </div>
+
+    </div>
+
+    
+  
+    
+    
+ </div>
+
+
+{% endblock %}
+
+
+
+    

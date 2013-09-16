@@ -1,0 +1,6 @@
+from django.shortcuts import render ,get_object_or_404
+def generic_view(request,template):
+	return render(request,template)
+def exa(request):
+	text=example.objects.all()
+	return render(request,'text.html',{'text':text})

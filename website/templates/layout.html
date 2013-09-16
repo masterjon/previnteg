@@ -1,0 +1,236 @@
+<!doctype html>
+
+<!--[if lt IE 7 ]> <html class="ie ie6 ie-lt10 ie-lt9 ie-lt8 ie-lt7 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 ie-lt10 ie-lt9 ie-lt8 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 ie-lt10 ie-lt9 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9 ie-lt10 no-js" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<!-- the "no-js" class is for Modernizr. --> 
+
+<head id="www-sitename-com" data-template-set="html5-reset">
+
+	<meta charset="utf-8">
+	
+	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>{% block title %}{% endblock %}</title>
+	
+	<meta name="title" content="" />
+	<meta name="description" content="" />
+	<meta name="author" content="" />
+	<!-- Google will often use this as its description of your page/site. Make it good. -->
+	
+	<meta name="google-site-verification" content="" />
+	<!-- Speaking of Google, don't forget to set your site up: http://google.com/webmasters -->
+	
+	<meta name="author" content="" />
+	<meta name="Copyright" content="" />
+	
+	<!--  Mobile Viewport Fix
+	http://j.mp/mobileviewport & http://davidbcalhoun.com/2010/viewport-metatag
+	device-width : Occupy full width of the screen in its current orientation
+	initial-scale = 1.0 retains dimensions instead of zooming out if page height > device height
+	maximum-scale = 1.0 retains dimensions instead of zooming in if page width < device width
+	-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+	<!-- Iconifier might be helpful for generating favicons and touch icons: http://iconifier.net -->
+	
+	<!-- This is the traditional favicon.
+		 - size: 16x16 or 32x32
+		 - transparency is OK -->
+		 
+	<link rel="apple-touch-icon" href="_/img/apple-touch-icon.png" />
+	<!-- The is the icon for iOS's Web Clip and other things.
+		 - size: 57x57 for older iPhones, 72x72 for iPads, 114x114 for retina display (IMHO, just go ahead and use the biggest one)
+		 - To prevent iOS from applying its styles to the icon name it thusly: apple-touch-icon-precomposed.png
+		 - Transparency is not recommended (iOS will put a black BG behind the icon) -->
+	
+	<!-- concatenate and minify for production -->
+	<link href="{{STATIC_URL}}css/reset.css" rel="stylesheet"/>
+	<link href="{{STATIC_URL}}css/bootstrap.css" rel="stylesheet">
+    <link href="{{STATIC_URL}}css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="{{STATIC_URL}}css/style.css" rel="stylesheet"/>
+	{% block css %}
+
+	{% endblock %}
+	<!-- This is an un-minified, complete version of Modernizr. 
+		 Before you move to production, you should generate a custom build that only has the detects you need. -->
+	<script src="{{STATIC_URL}}js/modernizr-2.6.2.dev.js"></script>
+	
+	<!-- Application-specific meta tags -->
+	<!-- Windows 8 -->
+	<meta name="application-name" content="" /> 
+	<meta name="msapplication-TileColor" content="" /> 
+	<meta name="msapplication-TileImage" content="" />
+	<!-- Twitter -->
+	<meta name="twitter:card" content="">
+	<meta name="twitter:site" content="">
+	<meta name="twitter:title" content="">
+	<meta name="twitter:description" content="">
+	<meta name="twitter:url" content="">
+	<!-- Facebook -->
+	<meta property="og:title" content="" />
+	<meta property="og:description" content="" />
+	<meta property="og:url" content="" />
+	<meta property="og:image" content="" />
+
+</head>
+
+<body>
+	<header>
+		<div class="navbar navbar-inverse navbar-fixed-top">
+		    <div class="navbar-inner">
+		        <div class="container">
+		          	<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+		            	<span class="icon-bar"></span>
+		            	<span class="icon-bar"></span>
+		            	<span class="icon-bar"></span>
+		          	</button>
+		          	<a class="brand" href="{% url 'home' %}">Previnteg</a>
+			        <div class="nav-collapse collapse">
+			            <ul class="nav main-menu">
+			              <li id="op-home"><a href="{% url 'home' %}">Inicio</a></li>
+			              <li id="op-servicios"><a href="{% url 'servicios' %}">Servicios</a></li>
+			              <li id="op-vida"><a href="{% url 'vida' %}">Vida</a></li>
+			              <li id="op-gmm"><a href="{% url 'gmm' %}">Gastos Médicos Mayores</a></li>
+			              <li id="op-danios"><a href="{% url 'danios' %}">Daños</a></li>
+			              <li id="op-contacto"><a href="">Contacto</a></li>
+			            </ul>
+			        </div><!--/.nav-collapse -->
+		        </div>
+		    </div>
+	    </div>
+	</header>  
+{% block content %}
+{% endblock %}
+<hr>
+<div class="container">
+  <footer>
+  <legend>Contáctanos</legend>
+   <form id="contact-form">
+   	 {% csrf_token %}
+	<div class="span3" style="margin-bottom:15px;">
+    	<h3>Previnteg</h3>
+		<div class="hidden-phone px16" >
+			<a href="tel:2068767" data-original-title="" title="">
+				<i class="icon-phone icons"></i>
+				<b>(998) 2 06 87 67</b>
+			</a>
+		</div>
+		<div class="hidden-phone px16">
+			<a href="mailto:david@previnteg.com.mx" title="" data-original-title="">
+				<i class="icon-envelope icons"></i>
+				<b>david@previnteg.com.mx</b>
+			</a>
+		</div>
+		<!--Mobile icons -->		             
+		<div class="visible-phone btn-group-vertical">
+            <a href="tel:2068767" class="btn btn-small" data-original-title="" title="">
+                <i class="icon-phone icons"></i><br>
+                (998) 2 06 87 67
+            </a>
+            <a class="btn btn-small" href="mailto:david@previnteg.com.mx" title="" data-original-title="">
+                <i class="icon-envelope icons"></i><br>
+                david@previnteg.com.mx
+            </a>
+        </div>
+	</div>
+   
+    <div class="span4 form-horizontal">
+		<div class="control-group">
+		    <label class="control-label" for="inputName">Nombre</label>
+		    <div class="controls">
+		      <input type="text" id="inputName" name="nombre" placeholder="Nombre" required>
+		    </div>
+		</div>
+		<div class="control-group">
+		    <label class="control-label" for="inputEmail">Email</label>
+		    <div class="controls">
+		      <input type="email" id="inputEmail" name="email" placeholder="Email" required>
+		    </div>
+		</div>
+		<div class="control-group">
+		    <label class="control-label" for="inputPhone">Teléfono</label>
+		    <div class="controls">
+		      <input type="text" id="inputPhone" name="telefono" placeholder="Teléfono">
+		    </div>
+		</div>
+		<div id="form-response"class="alert alert-success"></div>
+	</div>
+	<div class="span4">   
+    	 <textarea  rows="6" name="comentarios" placeholder="Dejanos tus comentarios, dudas, solicitudes"></textarea>
+    	 
+		<div class="control-group">
+		    <div class="controls"><button id="send" type="submit" class="btn btn-primary pull-right">Enviar</button></div>
+		</div>
+	</div>	
+	</form>
+   </footer>
+</div> <!-- /container -->
+
+<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
+		 http://chromium.org/developers/how-tos/chrome-frame-getting-started -->
+<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+
+<!-- Grab Google CDN's jQuery. fall back to local if necessary -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write("<script src='{{STATIC_URL}}js/jquery-1.9.1.min.js'>\x3C/script>")</script>
+
+<!-- this is where we put our custom functions -->
+<!-- don't forget to concatenate and minify if needed -->
+<script src="{{STATIC_URL}}js/bootstrap.min.js"></script>
+<script src="{{STATIC_URL}}js/jquery.validate.js"></script>
+<script type="text/javascript" src="{{STATIC_URL}}js/localization/messages_es.js"> </script>
+<script src="{{STATIC_URL}}js/functions.js"></script>
+<script type="text/javascript">
+$(document).ready(function (){
+  $("#contact-form").validate({
+      submitHandler: function(form) {
+	 	$.ajax("{% url 'contact' %}",{
+	        data:$("#contact-form").serialize(),
+	        type:'post',
+	        cache:false,
+	        timeout:8000,
+	        beforeSend: function(result){
+	            
+	        },
+	        //add a timeout ---------------------------------------------------------
+	        success: function(result){
+	            //alert(result)
+	            $("#form-response").html(result) 
+	            $(".alert-success").fadeIn()
+	        },
+	        error:function(result){
+
+	        }
+	    })
+      }
+  })	
+})
+</script>
+{% block js %}
+
+{% endblock  %}
+<!-- Asynchronous google analytics; this is the official snippet.
+	 Replace UA-XXXXXX-XX with your site's ID and uncomment to enable.
+	 
+<script>
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-XXXXXX-XX']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+-->
+  
+</body>
+</html>

@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}   
+
+{% block js %}
+<script>
+$(document).ready(function (){
+    $(".main-menu li").removeClass("active")
+    $("li#op-danios").addClass("active")
+
+});
+</script>
+{% endblock  %}
+
+{% block content %}
+
+<div class="jumbotron subhead"><img src="{{STATIC_URL}}/img/slide6.jpg"></div>
+    <div class="hero-unit">
+    <h1>SEGURO DE DAÑOS</h1>
+    <h2>LO QUE TENEMOS PARA TI</h2>
+    <div class="row-fluid">
+        <div class="span6 border">
+            <p>El seguro de daños, es el <b>ramo más extenso</b>  dentro del mercado de seguros, ya que comprende el seguro  del automóvil, las casas,  las  embarcaciones de placer ,  las  empresas,(incluyendo, el seguro de gastos médicos y vida del  trabajador),   el  transporte de mercancías (nacional e internacional ) ,  y  los seguros de grandes  barcos  y aviones.</p>
+
+            <p>Cabe destacar que un sector importante de la economía, que requiere de  un seguro, son las <b>Pequeñas y Medianas empresas  PYMES</b>, (Restaurantes, Hoteles,  Oficinas,  Comercios  e Industrias en general) las cuales están expuestas a <b>riesgos que pueden afectar directamente</b> a los inmuebles,  a  las mercancías, y a la maquinaria, u ocasionar daños a terceros.</p>
+
+            <p>Como se puede apreciar,  el seguro de Daños  <b>requiere de especialistas</b>  con un conocimiento amplio en la materia, a fin de   brindar las mejores  soluciones de protección.</p>
+        </div>
+        <div class="span6">
+              <p><b>En PREVINTEG </b>contamos con  especialistas que le asesoraran desde la contratación de un seguro de  auto, hasta la contratación  de un  seguro de  avión,<b> nos respaldan  25 años de experiencia.</b></p>
+
+            <p><b><a href="">Contáctanos</a></b>, estamos preparados  para asesorarte  EN LA ADQUISICION DE UN SEGURO DEL RAMO DE DAÑOS.
+            </p>
+        </div>
+
+    </div>
+
+    
+  
+    
+    
+ </div>
+
+
+{% endblock %}
+

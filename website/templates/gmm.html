@@ -1,0 +1,43 @@
+{% extends 'layout.html' %} 
+{% block js %}
+<script>
+$(document).ready(function (){
+    $(".main-menu li").removeClass("active")
+    $("li#op-gmm").addClass("active")
+
+});
+</script>
+{% endblock  %}
+    
+
+{% block content %}
+
+<div class="jumbotron subhead"><img src="{{STATIC_URL}}/img/slide4.jpg"></div>
+    <div class="hero-unit">
+    <h1>SEGUROS DE GASTOS MEDICOS MAYORES</h1>
+    <h2>LO QUE TENEMOS PARA TI</h2>
+    <div class="row-fluid">
+        <div class="span6 border">
+            <p><b>Cada año, dos  millones de familias pierden parte de su patrimonio a causa de alguna atención médica,  ya que en ese momento no contaban con un seguro de Gastos Médicos Mayores.</b></p>
+
+            <p>Por otro lado el servicio de salud pública en México <b>(IMSS, ISSSTE, Y SECTOR SALUD)</b>  resulta insuficiente ante la creciente demanda de la población, por estas  y otras razones, las familias hacen el esfuerzo de <b>atenderse en el sector privado</b>, pero el gasto que realizan lo tienen que hacer directamente de su bolsillo, por lo que se tiene que echar mano de préstamos o vender parte del  patrimonio, causando  finalmente <b>la quiebra  económica de la familia</b></p>
+
+            <p>Una solución a este problema es contar con el respaldo de un <b>Seguro de Gastos Médicos Mayores</b>, ya que es un sinónimo de <b>responsabilidad</b>, que no afectara  el patrimonio familiar de una manera brusca. </p>
+        </div>
+        <div class="span6">
+              <p> Acérquese a <b>PREVINTEG</b>, y si usted desea conocer más de este seguro, nosotros le explicaremos   las principales  <b>clausulas del contrato,  y  la forma de cómo opera  el seguro.</b> </p>
+
+            <p><a href="">Contáctanos</a> estamos preparados  para asesorarte <b>EN LA ADQUISICION DE UN SEGURO DE GASTOS MEDICOS MAYORES.</b>
+            </p>
+        </div>
+
+    </div>
+
+    
+  
+    
+    
+ </div>
+
+
+{% endblock %}

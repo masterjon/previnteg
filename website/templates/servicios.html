@@ -1,0 +1,63 @@
+{% extends 'layout.html' %} 
+{% block js %}
+<script>
+$(document).ready(function (){
+    $(".main-menu li").removeClass("active")
+    $("li#op-servicios").addClass("active")
+
+});
+</script>
+{% endblock  %}
+    
+
+{% block content %}
+
+<div class="jumbotron subhead"><img src="{{STATIC_URL}}/img/slide5.jpg"></div>
+    <div class="hero-unit text-center">
+    <h1>¿ESTAS INTERESADO EN CONTRATAR UN SEGURO? </h1>
+    <h2>CONOCE NUESTROS SERVICIOS <br>¿CUAL ES NUESTRA DIFERENCIA? </h2>
+    <div class="row-fluid text-left">
+        <div class="span12">
+            <p><b>PREVINTEG</b>, es la <b>empresa de  consultoría en seguros</b> , que le ofrece todo un  sistema de  <b>PROTECCION INTEGRAL</b>, desde la asesoría profesional para   la  contratación   de un seguro ,  el  seguimiento  y  el control administrativo del seguro, hasta   la orientación  y  el soporte <b>técnico- legal</b>   en  el proceso  de  la   reclamación de  un siniestro. </p>
+
+            <p>Dentro del mercado asegurador,  <b>nuestra diferencia</b>  es la  atención <b>personalizada,  la asesoría  y el apoyo profesional</b> en seguros de <b>VIDA, GASTOS MEDICOS MAYORES, Y DAÑOS</b> </p>
+
+            <p>Estamos capacitados para orientarlo en la <b>contratación de toda clase de seguros</b> desde los planes <b>Individuales y familiares</b> hasta los planes para <b>pequeñas, medianas y grandes   empresas</b>, ofreciendo  adicionalmente  la orientación financiera, para las <b>deducciones fiscales</b>, conforme a algunos planes de seguros.</p>
+        </div>
+    </div>
+    <h3> CONSULTANOS TENEMOS UN PLAN PARA CADA NECESIDAD </h3>
+    <div class="row-fluid text-left">
+        <div class="span6">
+            <ol class="service-list">
+                <li>SEGUROS DE VIDA  BÁSICOS</li>
+                <li>SEGUROS DE VIDA CON AHORRO</li>
+                <li>SEGUROS DE VIDA PARA LA EDUCACION </li>
+                <li>SEGUROS  DE VIDA  CON AHORRO PARA EL RETIRO</li>
+                <li>SEGUROS DE VIDA PARA DIABETICOS </li>
+                <li>SEGUROS GASTOS MEDICOS MAYORES </li>
+                <li>SEGUROS PARA CASA HABITACION</li>
+                <li>SEGUROS DE AUTOS Y CAMIONES</li>
+                <li>SEGUROS DE EMBARCACIONES</li>
+                <li>SEGUROS RESPONSABILIDAD CIVIL PROFESIONALES PARA MEDICOS</li>
+            </ol>
+        </div>
+        <div class="span6">
+            <ol class="service-list">
+                <li>SEGUROS  DE DAÑOS PARA  EMPRESAS</li>
+                <li>SEGUROS DE GRUPO   DE GASTOS MEDICOS MAYORES PARA EMPLEADOS</li>
+                <li>SEGUROS  DE  GRUPO  VIDA  PARA EMPLEADOS</li>
+                <li>SEGUROS   DE VIDA PARA HOMBRE  CLAVE</li>
+                <li>SEGUROS DE VIDA PARA SOCIOS</li>
+            </ol>
+        </div>
+    </div>
+
+    
+  
+    
+    
+ </div>
+
+
+{% endblock %}
+
